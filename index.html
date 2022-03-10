@@ -1,99 +1,56 @@
-<!DOCTYPE HTML>
-<!--By:月影寒心-->
+<!DOCTYPE html>
 <html>
- <head>
-     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-     <title>VIP视频解析</title>
- </head>
- 
-    <style>
-   
-   
-    input {
-            -webkit-box-sizing: border-box;
-
-            /* 角弧度 */
-            border-radius: 1px;
-            
-            /* 边粗 边颜色 */
-            border: 1px solid  #afb4db;
-            
-            width: 100%;
-            height: 40px;
-            }
-    input:focus {
-        outline: none;
-        border: 1px solid #54c5d8
-    }
-       
-   .button {
-        border: none;
-        width: 100%;
-        height: 40px;
-        background-color: #54c5d8;
-        color: white;
-        border-radius: 1px;
-        cursor: pointer;
-    }
-
-    .button:focus{
-        border: none;
-        outline: none
-
-    }
-      </style>
+<head>
+<meta charset="UTF-8"/>
+<title>黑客帝国代码雨
+</title>
+<style type="text/css">
+*{margin:0;padding:0;}
+body{background:black;}
+canvas{display:block;}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("c");
+var ctx= c.getContext("2d");
+c.height=window.innerHeight;
+c.width=window.innerWidth;
+var chinese="010110";
+chinese=chinese.split("");
+var font_size=10;
+var columns=c.width/font_size;
+var drops=[];
+for(var i=0;i<columns;i++)
+	drops[i]=1;
+function draw(){
+	ctx.fillStyle="rgba(0,0,0,0.05)";
+	ctx.fillRect(0,0,c.width,c.height);
+	ctx.fillStyle="#0F0";
+	ctx.font=font_size+"px arial";
+	for(var i=0;i<drops.length;i++){
+	var text=chinese[Math.floor
+(Math.random()*chinese.length)];
+ctx.fillText(text,i*font_size,drops[i]*font_size);
+if(drops[i]*font_size>c.height&&Math.random()>0.975)
+	drops[i]=0;
+	drops[i]++;
+	}
+}
+setInterval(draw,50);
 
 
-  
- <body>
+function spjx(){
+var url = window.document.location.href.toString(); //获取的完整url
+var u = url.slice(url.indexOf('?')+1);//截取?后面的字符串
 
+//alert(u);
 
+window.location.href="https://okjx.cc/?url="+u;
+}
 
-
-  <form action="https://okjx.cc/" method="get">
-  
-  
-   <div>
-    <p>搜索</p>
-   <!-- <textarea name="pz" rows="30" cols="40" ></textarea>-->
-    <input type="text" name="url" placeholder="名字或者链接"/>
-   </div>
-   
-   <br>
-   <div>
-    <button class="button button:focus" onclick="if(confirm('本站供提供静态前端界面显示，视频解析功能来源于网络找到的接口。当你点击确定按扭，代表跳转到这个接口，接口不受我们控制，请勿相信任何广告，使用时请注意安全。') == true){}else{return false;}">确定</button>
-   </div>
-   
-   
-   <p>免责声明</p>
-  <p>本站供提供静态前端界面显示，视频解析功能来源于网络找到的接口。当你点击确定按扭，代表跳转到这个接口，接口不受我们控制，请勿相信任何广告，使用时请注意安全。</p>
-   <br>
-   <br>
-   <br>
-   <br>
-     <br>
-   <br>
-   <br>
-   <br>
-     <br>
-   <br>
-   <br>
-   <br>
-     <br>
-   <br>
-   <br>
-   <br>  <br>
-   <br>
-   <br>
-   <br>  <br>
-   <br>
-   <br>
-   <br>
-     <br>
-   <p style="text-align:center;font-size:12px;color:#74787c;">Copyright © 2020 月影寒心. All rights reserved.</p>
-</div>
-  </form>
- </body>
-  
+setTimeout("spjx();",3000);
+</script>
+</body>
 </html>
